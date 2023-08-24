@@ -1,0 +1,20 @@
+PROCEDURE  ins(VAR T : ARRAY_OF INTEGER)
+VAR
+    pivot, i , j , temp: INTEGER;
+BEGIN
+    FOR i FROM 1 TO T.lengt STEP 1  DO
+    pivot : i;
+    j := i - 1 ;   
+            WHILE (j> 0 AND T[pivot] < T[j]) DO
+                T[j] = T[j - 1] 
+                j := j-1
+                temp := T[pivot]
+                T[pivot] := T[j]
+                T[j] := temp
+            END_WHILE  
+    END_FOR
+END
+ALGORITHM ins_sort
+VAR
+BEGIN
+END
